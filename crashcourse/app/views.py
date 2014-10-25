@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from app.models import Category
+from app.models import Task
 
 def index(request):
-    category_list = Category.objects.all()
-    return render(request, 'app/index.html', {'categories': category_list})
+    task_list = Task.objects.all()
+    return render(request, 'app/index.html', {'tasks': task_list})
