@@ -24,6 +24,8 @@ TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 
+DATABASE_PATH = os.path.join(PROJECT_PATH, 'app.db')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -70,7 +72,7 @@ WSGI_APPLICATION = 'crashcourse.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': DATABASE_PATH,
     }
 }
 
