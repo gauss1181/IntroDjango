@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
   <title>CrashCourse Planner</title>
@@ -6,6 +7,7 @@
 <body>
   <h1>Plan your CrashCourse workshop schedule!</h1>
   <p>Keep track of all the CrashCourse workshops you want to attend, so that you'll know and remember what to check out!</p>
+  <img src="{% static "logo.png" %}" alt="CrashCourse Logo" /><br>
   <a href="/app/about/">About</a><br>
   <a href="http://crashcourse.scottylabs.org">Learn More</a>
 </html>
