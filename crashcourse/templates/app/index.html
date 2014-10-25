@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-<head>
-  <title>Task Master</title>
-</head>
-<body>
-  <h1>Plan your day-to-day schedule!</h1>
-  <p>Keep track of all the activities you want to do every day, every hour, so that you'll remember your top priorities and manage your time better!</p>
-  {% if tasks %}
-    <ul>
-      {% for task in tasks %}
-      <li>{{ task.title }} ({{ task.category }})</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>There are currently no tasks created yet.</p>
-  {% endif %}
-  <img src="{% static "logo.png" %}" alt="CrashCourse Logo" /><br>
-  <a href="/app/about/">About</a><br>
-  <a href="http://crashcourse.scottylabs.org">Learn More</a>
+  <head>
+    <title>Task Master</title>
+  </head>
+  <body>
+    <h1>Plan your day-to-day schedule!</h1>
+    <p>Keep track of all the activities you want to do every day, every hour, so that you'll remember your top priorities and manage your time better!</p>
+    {% if tasks %}
+      <ul>
+        {% for task in tasks %}
+        <li>{{ task.title }} ({{ task.category }})</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>There are currently no tasks created yet.</p>
+    {% endif %}
+    <img src="{% static "logo.png" %}" alt="CrashCourse Logo" /><br>
+    <a href="/app/add_task/">Add a New Task</a><br>
+    <a href="/app/about/">About</a><br>
+    <a href="http://crashcourse.scottylabs.org">Learn More</a>
+  </body>
 </html>
